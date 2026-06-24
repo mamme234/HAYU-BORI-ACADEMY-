@@ -1,8 +1,14 @@
 {
-  "rewrites": [
+  "builds": [
     {
-      "source": "/api/(.*)",
-      "destination": "https://hayu-bori-academy.onrender.com/api/$1"
+      "src": "api/index.html",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "api/index.html"
     }
   ]
 }
